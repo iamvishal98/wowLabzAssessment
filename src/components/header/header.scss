@@ -1,0 +1,111 @@
+@import '../../mixins.scss';
+
+.header{
+    height: 50px;  
+    width: 100%;
+    transition: all ease 0.5s;
+    background: #020c1b;
+    z-index: 5;
+    position: fixed;
+    @include sm {
+        height: 60px;
+    }
+
+    .navbar {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        .logo {
+            width: 50px;
+            height: 30px;
+            @include sm {
+                width: 70px;
+                height: 40px;
+            }
+
+            .logo_icon {
+                height: 100%;
+                width: 100%;
+              
+
+                &:hover {
+                    color: #da2f68;
+                    transform: scale(1.2);
+                    cursor: pointer;
+                }
+            }
+
+        }
+        .favourites {
+            width: 30px;
+            height: 20px;
+            @include sm {
+                width: 50px;
+                height: 30px;
+            }
+        
+            .favourites_icon {
+                height: 100%;
+                width: 100%;
+
+                &:hover {
+                    color: #bd2a5b;
+                    transform: scale(1.1);
+                    cursor: pointer;
+                } 
+            }
+
+            span {
+                position: absolute;
+                right: 35px;
+                height: 20px;
+                width: 20px;
+                background-color: #bd2a5b;
+                border-radius: 20px;
+                top:-3px;
+                text-align: center;
+                transform: translateY(12px);
+                font-size: 12px;
+                font-weight: 700;
+                @include sm {
+                    transform: translateY(11px);
+                    right: 50px;
+                    font-size: 15px;
+                    height: 25px;
+                    width: 25px;
+                    border-radius: 25px;
+                }
+
+            }
+        }
+    }
+
+}
+
+//@media (min-width: 600px) {
+//     .header {
+      
+//             .navbar {
+//                 padding: 10px;
+//                 .logo {
+//                     width: 70px;
+//                     height: 40px;
+//                 }
+//                 .favourites {
+//                     width: 50px;
+//                     height: 30px;
+//                     span {
+//                         transform: translateY(11px);
+//                         right: 50px;
+//                         font-size: 15px;
+//                         height: 25px;
+//                         width: 25px;
+//                         border-radius: 25px;
+//                     }
+//                 }
+//             }
+        
+//     }
+//   }

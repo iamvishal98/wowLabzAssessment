@@ -1,0 +1,55 @@
+@import '../../mixins.scss';
+
+.favouritesWrapper {
+    display: grid;
+    grid-template-columns: 1fr ;
+    gap: 20px;
+    padding: 60px 30px;
+    justify-content: center;
+    @include sm {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include md {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include lg {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+
+    .img_container {
+        position: relative;
+        aspect-ratio: 1/1.5;
+        cursor: pointer;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+
+            &:hover {
+                transform: translate(1.2);
+            }
+        }
+    }
+
+    .no_items {
+      position: absolute;
+      left: 40vw;
+      top: 50vh;
+      font-size: 20px;
+      font-weight: 700;
+    }
+}
+
+@media (min-width: 600px) {
+    .favouritesWrapper { grid-template-columns: repeat(2, 1fr); }
+  }
+  
+  @media (min-width: 900px) {
+    .favouritesWrapper { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  @media (min-width: 1024px) {
+    .favouritesWrapper { grid-template-columns: repeat(5, 1fr); }
+  }
