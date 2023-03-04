@@ -6,7 +6,7 @@ import Movie from '../../components/movie/Movie';
 
 const Home = () => {
     const [query , setQuery] = useState('');
-    const data = useSelector(state => state.movie.data)
+    const data = useSelector(state => state.movie.data);
   return (
     <>
         <HeroBanner query={query} setQuery={setQuery}/>

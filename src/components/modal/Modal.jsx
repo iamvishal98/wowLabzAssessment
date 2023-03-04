@@ -36,7 +36,7 @@ const MovieDetails = ({setShowModal}) => {
                             </div>
                         { !isLocation ? 
                                 isItemPresent ?  <button disabled>In Favourites</button> :
-                                <button onClick={() => dispatch(add_to_favouries(item))}>Add to Watchlist</button>
+                                <button onClick={() => dispatch(add_to_favouries(item))}>Add to Favourites</button>
                             : 
                             <button 
                             onClick={() => {setShowModal(false); dispatch(remove_from_favourites(item?.id))}}

@@ -4,6 +4,10 @@ import { IMAGE_URL } from '../../api/api'
 import noPoster from '../../assets/no-poster.png';
 
 const MovieCard = ({item,handleClick}) => {
+
+    function trimString(str) {
+        return str.substring(0,40)+'..';
+    }
   return (
     <div className="movie" onClick={() => handleClick(item)}>
         <div className="movie_img">
@@ -12,7 +16,7 @@ const MovieCard = ({item,handleClick}) => {
         </div>
         <div className="textBlock">
             <span className="title">
-                    {item?.title || item.name}
+                    {trimString(item?.title) || trimString(item?.name)}
             </span>
             <span className="date">
                 {dayjs(item.realse_dat).format("MMM D,YYYY")}
